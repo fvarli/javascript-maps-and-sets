@@ -34,3 +34,48 @@ console.log('------------------------------------------------------');
 console.log('What is the size of our Saturday Map?');
 const saturdaySize = saturday.size;
 console.log(`My map contains ${saturdaySize} elements.`);
+console.log('------------------------------------------------------');
+
+console.log('Delete the element associated with the key 3.');
+console.log('Did my key-value pair successfully delete -3?', saturday.delete(3));
+console.log('------------------------------------------------------');
+
+console.log('Delete the element associated with the key 10.');
+console.log('Did my key-value pair successfully delete -10?', saturday.delete(10));
+console.log('------------------------------------------------------');
+
+console.log('What is the first key in your saturday map object?');
+const saturdayKeys = saturday.keys();
+const firstKey = saturdayKeys.next().value;
+console.log('The first key in our saturday map is', firstKey);
+console.log('------------------------------------------------------');
+
+console.log('What is the second value in your saturday map object?');
+const saturdayValues = saturday.keys();
+saturdayValues.next();
+const secondValue = saturdayValues.next().value;
+console.log('The second value in our saturday map is', secondValue);
+console.log('------------------------------------------------------');
+
+
+console.log('What is the third set of entries in your saturday Map object?');
+const saturdayEntries = saturday.entries();
+saturdayEntries.next();
+const secondEntry = saturdayEntries.next().value;
+console.log('What is our second entry in our map?', secondEntry);
+console.log('------------------------------------------------------');
+
+// Using the forEach method, if a key is equal to 12,
+// Console log the value of the key.
+
+saturday.forEach((value, key) => {
+    if (key === 12) {
+        console.log(`It's time for ${value}`);
+    }
+});
+console.log('------------------------------------------------------');
+
+console.log('Clear the entire saturday Map object');
+saturday.clear();
+console.log('Map Size?', saturday.size);
+console.log('------------------------------------------------------');
